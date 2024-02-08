@@ -8,3 +8,13 @@ INPUT
 OUTPUT
 1
 Ans
+N = int(input())
+arr = list(map(int,input().split()))
+
+def find_non_repeating_number(arr):
+    result = 0
+    for num in arr:
+        result ^= num
+    return result
+
+print(find_non_repeating_number(arr))
