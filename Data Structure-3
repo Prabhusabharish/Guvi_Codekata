@@ -1,0 +1,29 @@
+Q-3
+Given a string S of length N, find whether the given string is a palindrome using stack or linked list and print 'yes' otherwise print 'no'.
+Input Size : 1 <= N <= 100000
+Sample Testcases :
+INPUT
+GuviGeek
+OUTPUT
+no
+
+Ans :
+def is_palindrome(s):
+    stack = []
+    
+    # Push each character onto the stack
+    for char in s:
+        stack.append(char)
+
+    # Pop characters from the stack and compare with the original string
+    for char in s:
+        if char != stack.pop():
+            return 'no'
+    
+    return 'yes'
+
+# Read input
+S = input()
+
+# Call the function and print the result
+print(is_palindrome(S))
