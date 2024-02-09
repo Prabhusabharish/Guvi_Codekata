@@ -1,0 +1,25 @@
+Q-9
+Given a number N followed by N numbers. Keep the count of each number and print the maximum repeating number.
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+5
+15 5 -20 -20 -45
+OUTPUT
+-20
+Ans :
+N = int(input())
+no = list(map(int, input().split()))
+
+def rep_no():
+    count = {}
+    for num in no:
+        if num in count:
+            count[num] += 1
+        else:
+            count[num] = 1
+
+    max_count_no = max(count, key=count.get)
+    print(max_count_no)
+
+rep_no()
