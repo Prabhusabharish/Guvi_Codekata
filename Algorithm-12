@@ -1,0 +1,26 @@
+Q-12
+
+Given a number N followed by an array of N integers, every element appears twice except for one. Find that single one and print it.
+Input Size : N <= 100000
+Sample Testcase :
+INPUT
+5
+30 5 5 30 -45
+OUTPUT
+-45
+
+Ans :
+
+N = int(input())
+ele = list(map(int, input().split()))
+
+def find_single(arr) :
+    result = 0
+    
+    for no in arr :
+        result ^= no 
+    return result
+    
+single = find_single(ele)
+print(single)
+    
