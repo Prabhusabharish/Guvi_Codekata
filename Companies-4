@@ -1,0 +1,26 @@
+Q4-
+tHub
+companies4
+Share
+Given 2 arrays print 'yes' if they are mirror images of each other,otherwise 'no'.
+Input Size : N <= 1000000
+Sample Testcase :
+INPUT
+4
+1 2 3 4
+4 3 2 1
+OUTPUT
+yes
+Ans :
+N = int(input())
+a1 = list(map(int, input().split()))
+a2 = list(map(int, input().split()))
+
+def mirr_ima(a1, a2) :
+    return a1 ==a2 [::-1]
+result = mirr_ima(a1, a2)
+
+if result :
+    print("yes")
+else :
+    print("no")
