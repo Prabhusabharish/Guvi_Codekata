@@ -21,3 +21,26 @@ if m < k:
     print(" ".join(map(str, numbers_between)))
 else:
     print("Invalid input. Please make sure m is less than k.")
+
+Q12
+
+Given a number  n Find the number of the digits of number n
+
+Input Description:
+0<n<10000 Given number n
+
+Output Description:
+Print the number of the digits of number n
+
+Sample Input :
+3589
+Sample Output :
+4
+
+Ans
+n = int(input())
+
+a = len(str(abs(n)))
+
+print(a)
+
