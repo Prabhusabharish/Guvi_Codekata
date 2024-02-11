@@ -1,0 +1,23 @@
+Q11
+Given a number m and k separated by a space print the numbers between m and k
+
+Input Description:
+number m and n separated by a space 0<m<1000 0<n<1000 m<n
+
+Output Description:
+print the numbers between this two numbers
+
+Sample Input :
+5 8
+Sample Output :
+6 7
+Ans
+m, k = map(int, input().split())
+
+if m < k:
+
+    numbers_between = list(range(m + 1, k))
+
+    print(" ".join(map(str, numbers_between)))
+else:
+    print("Invalid input. Please make sure m is less than k.")
