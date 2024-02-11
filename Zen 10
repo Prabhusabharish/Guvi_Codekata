@@ -1,0 +1,26 @@
+Q10
+Given a number n followed by n numbers add the even number in an array
+
+Input Description:
+0<n<100 Given a number n Followed by n number in next line
+
+Output Description:
+Print the sum of even numbers in an array
+
+Sample Input :
+6
+5 7 4 4 6 8
+Sample Output :
+22
+Ans
+
+n = int(input())
+a = list(map(int, input(). split()))
+
+b = 0
+
+for i in a:
+    if i % 2 == 0:  
+        b += i
+
+print(b)
