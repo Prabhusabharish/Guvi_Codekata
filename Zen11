@@ -44,3 +44,9 @@ a = len(str(abs(n)))
 
 print(a)
 
+Q13
+guvi geek
+Ans
+a = input()
+n = a.upper()
+print(n)
