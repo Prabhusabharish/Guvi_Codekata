@@ -182,3 +182,89 @@ a = list(map(int, input(). split()))
 b = [num for num in a if num < 15]
 
 print(*b if b else [-1])
+
+Q22 :
+Given a number n Find whether the number is divisible  by 2,3 and 5.if divisible print yes else print no
+
+Input Description:
+0<n<1000 Given a number n
+
+Output Description:
+Print yes or no
+
+Sample Input :
+30
+Sample Output :
+yes
+Ans :
+n = int(input())
+
+if n %2 == 0 and n %3 == 0 and n%5 == 0 :
+    print("yes")
+else :
+    print("no")
+
+Q23:
+Given a string print the duplicate in the string  if their no duplicate  print -1
+
+Input Description:
+Given a string
+
+Output Description:
+Print duplicate of the string or -1
+
+Sample Input :
+Guvi Geek
+Sample Output :
+Ge
+Ans:
+a = input()
+
+def find_duplicates(a):
+    count = {}
+    d = []
+
+    for char in a :
+        if char.isalpha():  
+            if char in count :
+                if char not in d :
+                    d.append(char)
+            else:
+                count[char] = 1
+
+    if not d :
+        return -1
+    else:
+        return ''.join(d)
+result = find_duplicates(a)
+print(result)
+
+Q24 :
+Given a string print the vowels in the string
+
+Input Description:
+Given a string
+
+Output Description:
+Print the String
+
+Sample Input :
+guvi geek
+Sample Output :
+ui ee
+
+Ans :
+a = input()
+def print_vowels(a) :
+    vowels = "aeiou"
+    result = ""
+
+    for char in a :
+        if char in vowels :
+            result += char
+        elif char.isspace () :
+            result += " "
+    return result
+result = print_vowels(a)
+
+print(result)
