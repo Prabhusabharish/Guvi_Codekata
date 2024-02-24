@@ -66,6 +66,50 @@ if result :
     print("yes")
 else :
     print("no")
+Q 9 :
+a, b, x = map(int, input().split())
+def calculate_y(a, b, x):
+    y = a * x + b
+    return y
+
+result = calculate_y(a, b, x)
+print(result)
+
+
+Ans :
+a, b, x = map(int, input().split())
+def calculate_y(a, b, x):
+    y = a * x + b
+    return y
+
+result = calculate_y(a, b, x)
+print(result)
+
+Q11 :
+Given a string S ,print the vowels first and then consonants in the same order as they have occurred in the string.
+Input Size : N <= 10000
+Sample Testcase :
+INPUT
+GuVI
+OUTPUT
+uIGV
+Ans :
+input = input().strip()
+def print_vowels_and_consonants(s):
+    vowels = ""
+    consonants = ""
+
+    for char in s:
+        if char.lower() in "aeiou":
+            vowels += char
+        else:
+            consonants += char
+
+    result = vowels + consonants
+    print(result)
+
+print_vowels_and_consonants(input)
+
 
 Q14 :
 Q4-
@@ -116,3 +160,45 @@ if b(arr):
     print("yes")
 else:
     print("no")
+
+Q38 :
+input_string = input()
+words = input_string.split()
+if len(words) == 2:
+    reversed_string = words[1] + " " + words[0]
+    print(reversed_string)
+else:
+    print()
+
+Ans :
+input_string = input()
+words = input_string.split()
+if len(words) == 2:
+    reversed_string = words[1] + " " + words[0]
+    print(reversed_string)
+else:
+    print()
+Q42 :
+Given a string S of length N, find whether the given string is a palindrome using stack or linked list and print 'yes' otherwise print 'no'.
+Input Size : 1 <= N <= 100000
+Sample Testcases :
+INPUT
+GuviGeek
+OUTPUT
+no
+Ans :
+def palindrome(s):
+    stack = []
+    for char in s:
+        stack.append(char)
+    for char in s:
+        if char != stack.pop():
+            return 'no'
+    
+    return 'yes'
+
+S = input()
+
+print(palindrome(S))
+
+
