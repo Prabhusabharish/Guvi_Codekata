@@ -35,3 +35,35 @@ def subarr (n, arr) :
 
 result = subarr (n, arr)
 print(result)        
+Q3 :
+You are given with a queue. Your task is to reverse the queue elements and print it.
+
+Input Description:
+You are given a number ‘n’,denoting size of queue, Next line contains s space separated numbers
+
+Output Description:
+Print the reversed queue.
+
+Sample Input :
+6
+1 2 3 4 5 6
+Sample Output :
+6 5 4 3 2 1
+Ans :
+from collections import deque
+
+n = int(input())
+arr = list(map(int, input().split()))
+
+rev_arr = deque()
+while arr:
+    rev_arr.appendleft(arr.pop())
+
+first_element = True
+while rev_arr:
+    if not first_element:
+        print(" ", end="")
+    else:
+        first_element = False
+    
+    print(rev_arr.pop(), end="")
