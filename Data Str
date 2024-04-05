@@ -1,0 +1,26 @@
+Q1.
+Given a string S consisting of only '(' and ')', print 'yes' if it is balanced otherwise print 'no'.
+Sample Testcase :
+INPUT
+(())
+OUTPUT
+yes
+Ans:
+def is_balanced_parentheses(s):
+    stack = []
+    for char in s:
+        if char == '(':
+            stack.append('(')
+        elif char == ')':
+            if not stack or stack.pop() != '(':
+                return 'no'  
+    if not stack:
+        return 'yes' 
+    else:
+        return 'no' 
+
+s = input().strip()
+
+
+result = is_balanced_parentheses(s)
+print(result)
